@@ -71,4 +71,11 @@ module "eks" {
 
   write_kubeconfig   = true
   config_output_path = "./"
+  workers_additional_policies = [aws_iam_policy.worker_policy.arn]
+}
+resource "aws_iam_policy" "worker_policy" {
+  name        = "worker-policy"
+  description = "Worker policy for the ALB Ingress"
+
+  policy = file("iam-policy.json")
 }

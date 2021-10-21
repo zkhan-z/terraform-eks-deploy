@@ -1,12 +1,12 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: hello-kubernetes
+  name: # --> Add
 spec:
   rules:
     - http:
         paths:
           - path: /
             backend:
-              serviceName: hello-kubernetes
-              servicePort: 80
+              serviceName: # --> Add
+              servicePort: # --> Add

@@ -1,18 +1,18 @@
-apiVersion: apps/v1
+apiVersion: apps/v1 # --> API kubernetes apiVersion
 kind: Deployment
 metadata:
-  name: hello-kubernetes
+  name: # --> Add unique name to identify the object
 spec:
   selector:
     matchLabels:
-      name: hello-kubernetes
+      name:  # --> reference the pod
   template:
     metadata:
       labels:
-        name: hello-kubernetes
+        name: 
     spec:
       containers:
         - name: app
           image: # --> ADD image Name
           ports:
-            - containerPort: 8080 
+            - containerPort: # --> Add port

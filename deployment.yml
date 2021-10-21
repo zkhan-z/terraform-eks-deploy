@@ -1,0 +1,18 @@
+apiVersion: apps/v1 # --> API kubernetes apiVersion
+kind: Deployment
+metadata:
+  name: # --> Add unique name to identify the object
+spec:
+  selector:
+    matchLabels:
+      name:  # --> reference the pod
+  template:
+    metadata:
+      labels:
+        name: 
+    spec:
+      containers:
+        - name: app
+          image: # --> ADD image Name
+          ports:
+            - containerPort: # --> Add port

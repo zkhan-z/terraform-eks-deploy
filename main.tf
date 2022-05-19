@@ -30,10 +30,10 @@ module "vpc" {
   version = "2.58.0"
 
   name                 = "k8s-vpc"
-  cidr                 = "172.16.0.0/16"
+  cidr                 = ""
   azs                  = data.aws_availability_zones.available.names
-  private_subnets      = ["172.16.1.0/24", "172.16.2.0/24", "172.16.3.0/24"]
-  public_subnets       = ["172.16.4.0/24", "172.16.5.0/24", "172.16.6.0/24"]
+  private_subnets      = []
+  public_subnets       = []
   enable_nat_gateway   = true
   single_nat_gateway   = true
   enable_dns_hostnames = true
@@ -65,7 +65,7 @@ module "eks" {
       max_capacity     = 10
       min_capacity     = 1
 
-      instance_type = "m5.large"
+      instance_type = ""
     }
   }
 

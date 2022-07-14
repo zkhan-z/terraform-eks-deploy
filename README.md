@@ -1,4 +1,5 @@
 # terraform-eks-deploy
+<<<<<<< test-2.0
 I will create a ekscluster using Ansible, here I will specify my cluster modification, as well as, its scalability capacity.
 Main.tf is the terraform configuration script that will automate the build spec of eks clusters and node specification, as well as, policys and permissions. It will create the build based on vpc needs, private/public subnets etc. All the necessary componets needed for this build.
 Deployment.yml is the kubernetes container that will be deployed using the kubectl commands.
